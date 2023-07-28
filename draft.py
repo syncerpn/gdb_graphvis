@@ -6,15 +6,26 @@ Created on Fri Jul 28 02:47:20 2023
 """
 
 import matplotlib.pyplot as plt
-import re
+
+from CodeStructure import CodeStructure
+
+import turtle as T
 
 gdb_disas_file = "bomblab_phase_5.gasm"
 
-with open(gdb_disas_file, "r") as f:
-    data = f.readlines()
-    
-for line in data:
-    line = line.strip()
-    elements = re.split(": | ", line)
-    elements = [e for e in elements if e]
-    print(elements)
+
+cs = CodeStructure(gdb_disas_file, "phase_5")
+print(cs)
+
+T.Screen()
+T.TurtleScreen._RUNNING=True
+# T.up()
+T.setposition(0,-13)
+# T.down()
+
+T.hideturtle()
+
+# T.write(str(cs), font=("Consolas", 8, "normal"))
+T.write("dg", font=("Consolas", 8, "normal"))
+
+T.done()
