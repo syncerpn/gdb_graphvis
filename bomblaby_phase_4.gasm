@@ -1,0 +1,17 @@
+0x00000000004010bf <+0>:     sub    rsp,0x18
+0x00000000004010c3 <+4>:     lea    rdx,[rsp+0xc]
+0x00000000004010c8 <+9>:     mov    esi,0x401b74
+0x00000000004010cd <+14>:    mov    eax,0x0
+0x00000000004010d2 <+19>:    call   0x400c00 <__isoc99_sscanf@plt>
+0x00000000004010d7 <+24>:    cmp    eax,0x1
+0x00000000004010da <+27>:    jne    0x4010e3 <phase_4+36>
+0x00000000004010dc <+29>:    cmp    DWORD PTR [rsp+0xc],0x0
+0x00000000004010e1 <+34>:    jg     0x4010e8 <phase_4+41>
+0x00000000004010e3 <+36>:    call   0x4016e3 <explode_bomb>
+0x00000000004010e8 <+41>:    mov    edi,DWORD PTR [rsp+0xc]
+0x00000000004010ec <+45>:    call   0x4010a5 <func4>
+0x00000000004010f1 <+50>:    cmp    eax,0x2d0
+0x00000000004010f6 <+55>:    je     0x4010fd <phase_4+62>
+0x00000000004010f8 <+57>:    call   0x4016e3 <explode_bomb>
+0x00000000004010fd <+62>:    add    rsp,0x18
+0x0000000000401101 <+66>:    ret

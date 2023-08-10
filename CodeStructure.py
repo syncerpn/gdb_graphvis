@@ -84,6 +84,6 @@ class CodeStructure:
         sorted_blocks_head = sorted(self.blocks.keys(), key=lambda x: int(self.blocks[x].head, 16))
         repr_str = ""
         for head in sorted_blocks_head:
-            repr_str += f"{head}\n{str(self.blocks[head])}\n"
+            repr_str += f"{head}\n{str(self.blocks[head])}\n\n"
             
         return repr_str

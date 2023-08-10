@@ -1,0 +1,14 @@
+0x00000000004011b2 <+0>:     push   rbx
+0x00000000004011b3 <+1>:     mov    edx,0xa
+0x00000000004011b8 <+6>:     mov    esi,0x0
+0x00000000004011bd <+11>:    call   0x400be0 <strtol@plt>
+0x00000000004011c2 <+16>:    mov    rbx,rax
+0x00000000004011c5 <+19>:    mov    edi,0x603320
+0x00000000004011ca <+24>:    call   0x401143 <fun6>
+0x00000000004011cf <+29>:    mov    rax,QWORD PTR [rax+0x8]
+0x00000000004011d3 <+33>:    mov    rax,QWORD PTR [rax+0x8]
+0x00000000004011d7 <+37>:    cmp    DWORD PTR [rax],ebx
+0x00000000004011d9 <+39>:    je     0x4011e0 <phase_6+46>
+0x00000000004011db <+41>:    call   0x4016e3 <explode_bomb>
+0x00000000004011e0 <+46>:    pop    rbx
+0x00000000004011e1 <+47>:    ret

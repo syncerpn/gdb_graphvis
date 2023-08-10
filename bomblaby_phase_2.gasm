@@ -1,0 +1,26 @@
+0x0000000000400f0c <+0>:     push   rbp
+0x0000000000400f0d <+1>:     push   rbx
+0x0000000000400f0e <+2>:     sub    rsp,0x28
+0x0000000000400f12 <+6>:     mov    rsi,rsp
+0x0000000000400f15 <+9>:     call   0x401705 <read_six_numbers>
+0x0000000000400f1a <+14>:    cmp    DWORD PTR [rsp],0x1
+0x0000000000400f1e <+18>:    je     0x400f45 <phase_2+57>
+0x0000000000400f20 <+20>:    call   0x4016e3 <explode_bomb>
+0x0000000000400f25 <+25>:    jmp    0x400f45 <phase_2+57>
+0x0000000000400f27 <+27>:    add    ebx,0x1
+0x0000000000400f2a <+30>:    mov    eax,ebx
+0x0000000000400f2c <+32>:    imul   eax,DWORD PTR [rbp-0x4]
+0x0000000000400f30 <+36>:    cmp    DWORD PTR [rbp+0x0],eax
+0x0000000000400f33 <+39>:    je     0x400f3a <phase_2+46>
+0x0000000000400f35 <+41>:    call   0x4016e3 <explode_bomb>
+0x0000000000400f3a <+46>:    add    rbp,0x4
+0x0000000000400f3e <+50>:    cmp    ebx,0x6
+0x0000000000400f41 <+53>:    jne    0x400f27 <phase_2+27>
+0x0000000000400f43 <+55>:    jmp    0x400f51 <phase_2+69>
+0x0000000000400f45 <+57>:    lea    rbp,[rsp+0x4]
+0x0000000000400f4a <+62>:    mov    ebx,0x1
+0x0000000000400f4f <+67>:    jmp    0x400f27 <phase_2+27>
+0x0000000000400f51 <+69>:    add    rsp,0x28
+0x0000000000400f55 <+73>:    pop    rbx
+0x0000000000400f56 <+74>:    pop    rbp
+0x0000000000400f57 <+75>:    ret
